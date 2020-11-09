@@ -1,0 +1,93 @@
+:root {
+  --stress-text-color: #1180e7;
+  --main-color: #1abc9c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.img-section > img {
+  margin-top: 7vh;
+  object-fit: cover;
+  object-position: center;
+  width: 100vw;
+  height: auto;
+}
+
+.section-one,
+.section-two {
+  /* margin-top: minmax(100px, 3fr) */
+  position: relative;
+  z-index: -1;
+}
+.section-two {
+  margin-top: 5vh;
+}
+
+.section-one::before,
+.section-two::before {
+  content: "";
+  height: 0.6rem;
+  width: 0.6rem;
+  background: var(--main-color);
+  position: absolute;
+  top: 10px;
+  left: 1.8rem;
+  transform: rotate(45deg);
+  border: #15ec27 2px slid;
+}
+.section-two::before {
+  left: 30%;
+}
+
+.border {
+  border: 2px black solid;
+  margin: 0 10px;
+}
+
+.small-title {
+  font-size: larger;
+  color: var(--stress-text-color);
+  text-align: center;
+}
+
+.sentence {
+  padding: 10px 20px;
+}
+
+.grid-box {
+  display: grid;
+  grid-template:
+    "... ...... ..... ..." 15px
+    "... singer guitar..." 1fr
+    "... ...... ..... ..." 20px
+    "... base   drums ..." 1fr
+    "... ...... ..... ..." 15px
+    / 15px 1fr 1fr 15px;
+}
+
+.singer {
+  grid-area: singer;
+}
+.guitar {
+  grid-area: guitar;
+}
+.base {
+  grid-area: base;
+}
+.drums {
+  grid-area: drums;
+}
+
+footer {
+  position: unset;
+}

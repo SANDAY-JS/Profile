@@ -1,0 +1,54 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.live-information {
+  margin-top: 7vh;
+  padding-bottom: 1vh;
+  text-align: center;
+  background: linear-gradient(45deg, #020202, #776969);
+}
+.title-information {
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  font-family: "Mr Dafoe", cursive;
+  color: var(--main-color);
+}
+
+.img-section > img {
+  object-fit: cover;
+  width: 100vw;
+  height: auto;
+}
+
+.first-info {
+  padding: 20px;
+}
+.sub-title-info {
+  display: block;
+  text-align: center;
+  font-size: larger;
+  color: var(--main-color);
+}
+
+.first-info-ul li {
+  list-style: outside;
+  margin-left: 1.5rem;
+}
+
+.question {
+  margin-top: 20px;
+}
+
+.contact-page {
+  color: #37a9f5;
+  text-decoration: underline;
+}
+footer {
+  position: unset;
+}

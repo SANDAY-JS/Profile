@@ -1,0 +1,323 @@
+/* Mobile First */
+
+:root {
+  --background-color: #fafafa;
+  --text-color: rgb(40, 40, 40);
+  --header-background: rgb(16, 16, 16);
+  --image-color-second: rgb(49, 3, 53);
+  --footer-background: rgba(30, 30, 30, 0.8);
+  --footer-text-color: rgb(230, 230, 230);
+  --main-color: #1abc9c;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: var(--text-color);
+}
+body {
+  min-height: 100vh;
+  max-width: 100vw;
+  background: var(--background-color);
+}
+
+/* header section */
+
+header {
+  width: 100%;
+  height: 7vh;
+  background: var(--header-background);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1; /* In order to show up the menu section */
+}
+
+header .header-section {
+  height: 100%;
+  width: 100%;
+} /*You can delete this later*/
+
+header .header-section .title {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+}
+
+header .header-section .title .avalanche {
+  color: white;
+  font-family: serif;
+}
+
+/* Menu Section */
+.menu .menu-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.menu .menu-ul li {
+  margin: 30px;
+}
+.menu .menu-ul li a {
+  color: white;
+  font-size: 1.3rem;
+  position: relative;
+}
+
+.menu .menu-ul li a:not(.current-page)::before,
+.menu .menu-ul li a:not(.current-page)::after {
+  content: "";
+  height: 2.5px;
+  width: 100%;
+  background: linear-gradient(to right, #1abc9c, #04fa41);
+  position: absolute;
+  left: 0;
+  transition: transform 0.3s ease;
+  transform: scaleX(0);
+}
+
+.menu .menu-ul li a::after {
+  bottom: 0;
+  transform-origin: left;
+}
+.menu .menu-ul li a::before {
+  top: 0;
+  transform-origin: right;
+}
+
+.menu .menu-ul li a:hover::before,
+.menu .menu-ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+.menu .menu-ul li .current-page {
+  color: rgb(37, 37, 37);
+}
+
+/* -----------------------------
+          Hamburger
+----------------------------- */
+
+.hamburger-background {
+  width: 6vh; /* Responsive */
+  height: 6vh;
+  background: transparent;
+  cursor: pointer;
+  pointer-events: all;
+  z-index: 10; /* This is necessary. */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  margin: 4px;
+  padding: 2px;
+}
+.line {
+  background: white;
+  height: 3px;
+  width: 95%;
+  z-index: 10;
+
+  transition: all 0.3s ease-out;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(182, 182, 182, 0.7); /* changebable */
+  height: 100vh;
+  width: 50%;
+  z-index: 3;
+
+  position: fixed;
+  top: 0;
+  right: -50%;
+  border-radius: 10% 0 0 10%;
+
+  transition: all 0.3s ease-out;
+}
+.click .menu {
+  right: 0;
+}
+
+.click .hamburger-background .line1 {
+  transform: rotateZ(-405deg) translate(-13px, 9px);
+}
+.click .hamburger-background .line2 {
+  opacity: 0;
+}
+.click .hamburger-background .line3 {
+  transform: rotateZ(405deg) translate(-13px, -9px);
+}
+
+.whole-page {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: fixed; /* This is really important. */
+}
+.transparent {
+  background: rgba(230, 220, 220, 0.3);
+  pointer-events: all;
+  z-index: 0; /* It's working! */
+}
+
+/* ----------------------------------------------
+-----------  Main Section -----------------------
+------------------------------------------------*/
+
+main {
+  width: 100%;
+}
+
+.image-slides {
+  margin-top: 7vh;
+  background: linear-gradient(45deg, var(--main-color), #149279);
+  width: 100%;
+  height: 28vh;
+
+  position: relative;
+  z-index: -1;
+}
+
+.image-slides .img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+
+  overflow: hidden;
+
+  z-index: -1;
+}
+
+.news {
+  font-size: 1.7rem;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: calc(1rem - 7px);
+}
+
+/* .text {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* You gatta change something better.
+  margin-top: 10px;
+} */
+
+.sub-title {
+  text-align: left;
+  text-decoration: underline;
+  margin-top: 30px;
+  margin-left: 10px;
+  font-weight: bolder;
+  font-size: larger;
+}
+.sub-title-1 {
+  margin-top: 0;
+}
+.sub-title a {
+  color: #37a9f5;
+}
+
+.article {
+  margin-left: 30px;
+  margin-right: 10px;
+  white-space: pre-line;
+}
+
+.article .emphasis {
+  color: var(--image-color-second) /*rgb(187, 8, 8); */;
+  font-size: larger;
+}
+
+.information-page {
+  text-decoration: underline;
+  color: #37a9f5;
+}
+
+.main-article-section .article-ul {
+  margin-left: calc(30px + 1rem);
+  margin-right: 10px;
+}
+
+/* --------------------------------------
+---------------   footer  ---------------
+----------------------------------------*/
+
+footer {
+  background: var(--footer-background);
+  width: 100vw;
+  height: 15vh;
+  margin-top: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+footer .bottom-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer .bottom-box .bottom-box-ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .bottom-box .bottom-box-ul li {
+  margin: 0 20px 0 20px;
+}
+
+footer .bottom-box .bottom-box-ul li a {
+  color: var(--footer-text-color);
+}
+
+footer .bottom-box .bottom-box-ul-second {
+  justify-content: space-around;
+}
+
+.fab {
+  color: var(--footer-text-color);
+}
+
+.footer-pages:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 896px) and (orientation: landscape) {
+  /* iphone11 横向き */
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+}

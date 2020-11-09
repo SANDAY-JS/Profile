@@ -1,0 +1,216 @@
+/* @import url("./style.css"); */
+:root {
+  --contact-background: #fafafa;
+  --form-background: #1abc9c;
+}
+
+body {
+  background: var(--contact-background);
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+}
+
+.contact-title {
+  position: relative;
+  text-align: center;
+  margin-top: 7vh;
+  padding: 2rem;
+}
+.contact-title::after {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background: var(--form-background);
+  transform: rotate(45deg);
+  bottom: -13px;
+  left: calc(50% - 13px);
+}
+
+.contact-form {
+  width: 100%;
+  height: 30rem;
+  background: var(--form-background);
+  position: relative;
+  overflow-x: hidden; /* xとｙは両方設定できない（どっちかはautoになる）使用らしい */
+}
+.z-index-change {
+  z-index: -1;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  background: linear-gradient(135deg, transparent 20%, #149279);
+}
+.circle.circle1 {
+  top: 10px;
+  right: -25px;
+}
+.circle.circle2 {
+  bottom: 70px;
+  left: -38px;
+}
+
+/* Form */
+.contact-form form {
+  padding: 2rem 2rem;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.contact-form h3 {
+  text-align: left;
+  color: #fafafa;
+}
+
+.contact-form #input {
+  padding: 5px;
+  margin-left: 30px;
+  border: 2px #fafafa solid;
+  outline: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  border-radius: 25px;
+  background: none;
+  color: #fff;
+
+  z-index: 1;
+}
+
+label {
+  display: none;
+}
+
+/* ----------------------------------------
+------------------Elements---------------
+------------------------------------------ */
+
+.contact-form .name {
+  margin-bottom: 20px;
+}
+
+.contact-form .email {
+  margin-bottom: 20px;
+}
+
+.contact-form .message {
+  width: 75vw;
+  min-height: 7rem;
+  padding: 0.8rem 1.2rem !important;
+  resize: none;
+  overflow-y: auto;
+}
+
+.input-container {
+  position: relative;
+}
+
+.contact-form .submit {
+  position: absolute;
+  bottom: 3.5rem;
+  right: 2rem;
+  padding: 0.6rem 1.3rem;
+  background: #fff;
+  border: 2px solid #fafafa;
+  font-size: 0.95rem;
+  line-height: 1;
+  outline: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.contact-form .submit:hover {
+  background: transparent;
+}
+
+.contact-form .submit {
+  font-size: larger;
+  font-weight: bolder;
+  color: #1abc9c;
+}
+.contact-form .submit:hover {
+  color: #fff;
+}
+
+/* ---------------------------------------------------
+--------------- below section -------------------
+--------------------------------------------------- */
+
+.below-section {
+  margin: 10px 0;
+}
+
+.title-below {
+  text-align: center;
+}
+
+.bottom-box {
+  margin-top: 20px;
+}
+
+.bottom-box-ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#fab {
+  color: var(--main-color);
+  font-size: 2rem;
+}
+
+#my-form-status {
+  position: absolute;
+  bottom: 11.65rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.a-status {
+  position: absolute;
+  bottom: -4.25rem;
+  left: 0;
+  transform: translateX(-50%);
+
+  width: 70vw;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 8px;
+
+  color: #fafafa;
+  font-weight: bolder;
+  animation: status 4s ease forwards;
+
+  z-index: 10;
+}
+.success {
+  background: rgb(211, 250, 153);
+}
+.error {
+  background: rgb(250, 129, 92);
+}
+
+@keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
