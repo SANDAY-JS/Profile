@@ -49,7 +49,7 @@ header .header-section .title {
   font-size: larger;
 }
 
-header .header-section .title .avalanche {
+header .header-section .title .avalanche a{
   color: white;
   font-family: serif;
 }
