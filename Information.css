@@ -41,6 +41,10 @@ main {
   margin-left: 1.5rem;
 }
 
+.first-info-ul li a {
+　color: #37a9f5;
+}
+
 .question {
   margin-top: 20px;
 }
