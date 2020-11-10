@@ -156,13 +156,15 @@ header .header-section .title .avalanche a{
 }
 
 .click .hamburger-background .line1 {
-  transform: rotateZ(-405deg) translate(-13px, 9px);
+  transform: rotate(45deg) translateX(2px);
+  transform-origin: 0 0;
 }
 .click .hamburger-background .line2 {
   opacity: 0;
 }
 .click .hamburger-background .line3 {
-  transform: rotateZ(405deg) translate(-13px, -9px);
+  transform: rotate(-45deg) translateX(-2px);
+  transform-origin: 0 0;
 }
 
 .whole-page {
