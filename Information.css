@@ -41,9 +41,9 @@ main {
   margin-left: 1.5rem;
 }
 
-.first-info-ul li a {
-　color: #37a9f5;
-　text-decoration: underline;
+.first-info-ul li a{
+  text-decoration: underline;
+  color: #37a9f5;
 }
 
 .question {
