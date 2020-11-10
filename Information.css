@@ -43,6 +43,7 @@ main {
 
 .first-info-ul li a {
 　color: #37a9f5;
+　text-decoration: underline;
 }
 
 .question {
