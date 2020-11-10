@@ -79,7 +79,7 @@ header .header-section .title .avalanche {
   background: linear-gradient(to right, #1abc9c, #04fa41);
   position: absolute;
   left: 0;
-  transition: transform 0.3s ease;
+  transition: transform 0.15s ease;
   transform: scaleX(0);
 }
 
