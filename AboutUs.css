@@ -1,3 +1,4 @@
+/* Template */
 :root {
   --stress-text-color: #1180e7;
   --main-color: #1abc9c;
@@ -15,6 +16,10 @@ body {
   min-height: 100vh;
 }
 
+/* ----------------------------
+-------------Main-------------
+----------------------------- */
+
 .img-section > img {
   margin-top: 7vh;
   object-fit: cover;
@@ -25,7 +30,6 @@ body {
 
 .section-one,
 .section-two {
-  /* margin-top: minmax(100px, 3fr) */
   position: relative;
   z-index: -1;
 }
@@ -36,14 +40,14 @@ body {
 .section-one::before,
 .section-two::before {
   content: "";
-  height: 0.6rem;
-  width: 0.6rem;
+  height: 0.625rem;
+  width: 0.625rem;
   background: var(--main-color);
   position: absolute;
-  top: 10px;
+  top: 9.665px;
   left: 1.8rem;
   transform: rotate(45deg);
-  border: #15ec27 2px slid;
+  z-index: -2;
 }
 .section-two::before {
   left: 30%;
@@ -88,6 +92,9 @@ body {
   grid-area: drums;
 }
 
+/* -----------------
+------Footer-------
+------------------ */
 footer {
   position: unset;
 }
