@@ -98,3 +98,18 @@ body {
 footer {
   position: unset;
 }
+
+@media (min-width: 600px) {
+  .img-section > img {
+    width: 80vw;
+  }
+
+  .border {
+    width: 77.5vw;
+  }
+
+  .section-one::before,
+  .section-two::before {
+    display: none;
+  }
+}
