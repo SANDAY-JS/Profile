@@ -214,3 +214,16 @@ label {
     pointer-events: none;
   }
 }
+
+@media (min-width: 600px) {
+  .contact-title {
+    margin-top: 10vh;
+  }
+  main {
+    width: 100vw !important;
+    margin-bottom: unset !important;
+  }
+  .below-section {
+    margin: 10px 0 2rem 0;
+  }
+}
