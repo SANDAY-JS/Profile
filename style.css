@@ -429,7 +429,8 @@ i#christmas {
     height: 100%;
   }
   .menu .menu-ul li .current-page {
-    color: #646464;
+    /* color: #646464; */
+    color: var(--christmas-color-lightgreen);
   }
   .menu .menu-ul li a {
     font-size: smaller;
