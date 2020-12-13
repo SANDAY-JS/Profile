@@ -20,12 +20,6 @@ function contactFormFin() {
 humbergerBackground.addEventListener("click", contactFormStart);
 wholePage.addEventListener("click", contactFormFin);
 
-//confirm
-// submit.addEventListener("click", function () {
-//   alert("送信しますか？");
-// });
-
-// Copied
 
 window.addEventListener("DOMContentLoaded", function () {
   // get the form elements defined in your form HTML above
